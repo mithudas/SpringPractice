@@ -52,6 +52,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/home").hasRole("ADMIN")
                 .antMatchers("/register").permitAll()
+                .antMatchers("/aop*").permitAll()
                 .antMatchers("/registerUser").permitAll()
                 .antMatchers("/registrationConfirmation").permitAll()
                 .anyRequest().authenticated()
